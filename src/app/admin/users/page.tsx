@@ -1,10 +1,9 @@
 "use client";
 
-import ProductAddModal from "@/src/components/ProductAddModal";
-import UserAddModal from "@/src/components/UserAddModal";
-import DataTable from "@/src/components/tables/DataTable";
-import Button from "@/src/components/ui/Button";
-import Modal from "@/src/components/ui/Modal";
+import UserAddModal from "@/src/components/admin/UserAddModal";
+import DataTable from "@/src/components/admin/tables/DataTable";
+import Button from "@/src/components/admin/ui/Button";
+import Modal from "@/src/components/admin/ui/Modal";
 import { useState } from "react";
 
 export default function UserPage() {

@@ -131,7 +131,7 @@ export default function HomePage() {
                     ].map((f) => (
                         <div
                             key={f.title}
-                            className="p-6 rounded-xl bg-white border"
+                            className="p-6 rounded-xl bg-white shadow-sm"
                         >
                             <h3 className="font-semibold text-lg mb-2 text-slate-800">
                                 {f.title}
@@ -141,62 +141,6 @@ export default function HomePage() {
                     ))}
                 </div>
             </section>
-
-            {/* CART DRAWER */}
-            <div
-                className={`fixed inset-0 z-50 transition ${cartOpen ? "visible" : "invisible"
-                    }`}
-            >
-                {/* Overlay */}
-                <div
-                    className={`absolute inset-0 bg-black/40 transition-opacity ${cartOpen ? "opacity-100" : "opacity-0"
-                        }`}
-                    onClick={() => setCartOpen(false)}
-                />
-
-                {/* Drawer */}
-                <div
-                    className={`absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl transform transition-transform duration-300 ${cartOpen ? "translate-x-0" : "translate-x-full"
-                        }`}
-                >
-                    <div className="p-6 border-b flex justify-between items-center">
-                        <h3 className="text-lg font-semibold">Your Order</h3>
-                        <button onClick={() => setCartOpen(false)}>✕</button>
-                    </div>
-
-                    <div className="p-6 space-y-4 overflow-y-auto h-[calc(100%-180px)]">
-                        {cartItems.length === 0 && (
-                            <p className="text-slate-500 text-sm">
-                                Your cart is empty.
-                            </p>
-                        )}
-
-                        {cartItems.map((item, i) => (
-                            <div
-                                key={i}
-                                className="flex justify-between text-sm"
-                            >
-                                <span>{item.name}</span>
-                                <span>LKR {item.price}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="p-6 border-t">
-                        <div className="flex justify-between font-semibold mb-4">
-                            <span>Total</span>
-                            <span>LKR {total.toLocaleString()}</span>
-                        </div>
-
-                        <Link
-                            href="/cart"
-                            className="block text-center w-full rounded-lg bg-emerald-600 text-white py-3 font-medium hover:bg-emerald-700"
-                        >
-                            Go to Checkout
-                        </Link>
-                    </div>
-                </div>
-            </div>
         </>
     );
 }

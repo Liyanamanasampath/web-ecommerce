@@ -1,9 +1,9 @@
 "use client";
 
-import CategoryAddModal from "@/src/components/CategoryAddModal";
-import DataTable from "@/src/components/tables/DataTable";
-import Button from "@/src/components/ui/Button";
-import Modal from "@/src/components/ui/Modal";
+import CategoryAddModal from "@/src/components/admin/CategoryAddModal";
+import DataTable from "@/src/components/admin/tables/DataTable";
+import Button from "@/src/components/admin/ui/Button";
+import Modal from "@/src/components/admin/ui/Modal";
 import { useState } from "react";
 
 export default function CategoryPage() {

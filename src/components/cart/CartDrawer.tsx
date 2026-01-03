@@ -40,7 +40,7 @@ export default function CartDrawer() {
             <img
               src={item.image}
               alt={item.name}
-              className="w-16 h-16 rounded-lg object-cover border"
+              className="w-16 h-16 rounded-lg object-cover shadow-xl"
             />
 
             <div className="flex-1">

@@ -24,7 +24,7 @@ export default function CheckoutPage() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* LEFT – FORM */}
-          <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-sm">
+          <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-md">
             <h2 className="text-xl font-semibold mb-6">
               Checkout
             </h2>
@@ -116,7 +116,7 @@ export default function CheckoutPage() {
           </div>
 
           {/* RIGHT – ORDER SUMMARY */}
-          <div className="bg-white rounded-2xl p-6 shadow-sm h-fit">
+          <div className="bg-white rounded-2xl p-6 shadow-md h-fit">
             <h3 className="text-lg font-semibold mb-6">
               Order summary
             </h3>
@@ -130,7 +130,7 @@ export default function CheckoutPage() {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 rounded-lg object-cover border"
+                    className="w-16 h-16 rounded-lg object-cover shadow-md"
                   />
 
                   <div className="flex-1">

@@ -44,8 +44,7 @@ export default function ProductItem({
       {/* Card */}
       <div
         onClick={() => setOpen(true)}
-        className="rounded-xl border bg-white overflow-hidden
-        hover:shadow-lg transition cursor-pointer"
+        className="rounded-xl shadow-xl  bg-white overflow-hidden transition cursor-pointer"
       >
         {/* Image / Placeholder */}
         <div className="h-48 w-full bg-slate-100 flex items-center justify-center">

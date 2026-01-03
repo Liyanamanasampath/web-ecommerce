@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Modal from "@/src/components/ui/Modal";
-import Button from "@/src/components/ui/Button";
+import Modal from "@/src/components/admin/ui/Modal";
+import Button from "@/src/components/admin/ui/Button";
 import TextInput from "./ui/TextInput";
 import ImageUpload from "./ui/ImageUpload";
 import SubCategoryInput from "./ui/SubCategoryInput";

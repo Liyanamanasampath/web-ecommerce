@@ -8,7 +8,7 @@ export default function WebHeader() {
   const isAdmin = false;
 
   return (
-    <header className="border-b bg-white">
+    <header className=" bg-white">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-slate-900">
           ShopX
@@ -26,7 +26,7 @@ export default function WebHeader() {
             </Link>
           ) : isLoggedIn ? (
             <Link
-              href="/account"
+              href="/my-account"
               className="rounded-lg border px-4 py-2 hover:bg-slate-50"
             >
               My Account

@@ -36,7 +36,7 @@ export default function CartPage() {
         {/* Items */}
         <div className="md:col-span-2 space-y-4">
           {items.map((item) => (
-            <div key={item.id} className="flex gap-4 border rounded-xl p-4">
+            <div key={item.id} className="flex gap-4 shadow-md rounded-xl p-4">
               <img
                 src={item.image}
                 className="h-24 w-28 object-cover rounded"
@@ -64,7 +64,7 @@ export default function CartPage() {
         </div>
 
         {/* Summary */}
-        <div className="border rounded-xl p-6 h-fit">
+        <div className="shadow-xl rounded-xl p-6 h-fit">
           <h2 className="font-semibold mb-4">Order Summary</h2>
 
           <div className="flex justify-between mb-2">

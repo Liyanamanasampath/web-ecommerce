@@ -1,6 +1,7 @@
-import Footer from "@/src/components/layout/Footer";
-import Header from "@/src/components/layout/Header";
-import Sidebar from "@/src/components/layout/Sidebar";
+import Footer from "@/src/components/layout/admin/Footer";
+import Header from "@/src/components/layout/admin/Header";
+import Sidebar from "@/src/components/layout/admin/Sidebar";
+
 
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

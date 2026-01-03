@@ -1,6 +1,10 @@
 "use client";
 
+import OrderViewModal from "@/src/components/product/OrderViewModal";
+import { useState } from "react";
 export default function OrderHistoryPage() {
+  const [openOrder, setOpenOrder] = useState<any | null>(null);
+
   const orders = [
     {
       id: "W18391111",
@@ -11,12 +15,12 @@ export default function OrderHistoryPage() {
         {
           name: "Micro Backpack",
           price: "$70.00",
-          image: "https://via.placeholder.com/80",
+          image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200",
         },
         {
           name: "Nomad Shopping Tote",
           price: "$90.00",
-          image: "https://via.placeholder.com/80",
+          image: "https://images.unsplash.com/photo-1585386959984-a41552231693?w=200",
         },
       ],
     },
@@ -30,7 +34,7 @@ export default function OrderHistoryPage() {
       </p>
 
       {orders.map((order) => (
-        <div key={order.id} className="border rounded-xl mb-8">
+        <div key={order.id} className="shadow-sm rounded-xl mb-8">
           {/* Header */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-50 p-6 text-sm">
             <div>
@@ -45,12 +49,12 @@ export default function OrderHistoryPage() {
               <p className="text-slate-500">Total amount</p>
               <p className="font-medium">{order.total}</p>
             </div>
-            <div className="flex gap-2">
-              <button className="border px-4 py-2 rounded-md text-sm">
+            <div className="flex justify-end">
+              <button
+                onClick={() => setOpenOrder(order)}
+                className="border px-4 py-2 rounded-md text-sm hover:bg-slate-100"
+              >
                 View Order
-              </button>
-              <button className="border px-4 py-2 rounded-md text-sm">
-                View Invoice
               </button>
             </div>
           </div>
@@ -61,23 +65,27 @@ export default function OrderHistoryPage() {
               <div key={i} className="flex gap-4 p-6 items-center">
                 <img
                   src={item.image}
-                  className="h-20 w-20 rounded-lg object-cover"
+                  className="h-20 w-20 rounded-lg object-cover shadow-lg"
                 />
                 <div className="flex-1">
                   <h3 className="font-medium">{item.name}</h3>
                   <p className="text-sm text-emerald-600 mt-1">
-                    Delivered
+                    {order.status}
                   </p>
                 </div>
                 <div className="text-sm font-medium">{item.price}</div>
-                <button className="text-indigo-600 text-sm hover:underline">
-                  Buy again
-                </button>
               </div>
             ))}
           </div>
         </div>
       ))}
+
+      {/* Modal */}
+      {openOrder && (
+        <OrderViewModal
+          onClose={() => setOpenOrder(null)}
+        />
+      )}
     </div>
   );
 }
